@@ -1,6 +1,6 @@
-import {Statement} from 'js/statement.js';
-import {Action} from 'js/action.js';
-import {Victory} from 'js/victory.js';
+import {Statement} from './js/statement.js';
+import {Action} from './js/action.js';
+import {Victory} from './js/victory.js';
 
 let currentState = new Statement(true);
 
