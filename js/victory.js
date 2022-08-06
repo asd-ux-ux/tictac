@@ -37,8 +37,9 @@ export class Victory {
 		line.style.animationPlayState = 'running';
 	}
 
-	finish(doAction, changeState) {
+	finish(doAction, changeState, finishButton) {
 		document.removeEventListener( "click", changeState);
 		field.removeEventListener( "click", doAction);
+		finishButton.style.display = 'block';
 	}
 }
