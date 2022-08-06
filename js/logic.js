@@ -34,6 +34,7 @@ let changeState = function(event) {
 
 };
 
+let finishButton = document.querySelector('.nextRound');
 let points = [[], []];
 
 let doAction = function(event) {
@@ -49,9 +50,26 @@ let doAction = function(event) {
 	let victory = new Victory(victoryDetails[2], victoryDetails[1]);
 	victory.refreshGoal();
 	victory.makeLine();
-	victory.finish(doAction, changeState);
+	victory.finish(doAction, changeState, finishButton);
 	
+};
+
+let reloadRound = function(event) {
+	document.querySelector('.verticalLine').style.display = 'none';
+
+	let allSteps = document.querySelectorAll('.place > *');
+	for (let step of allSteps) {
+		step.remove();
+	}
+
+	points = [[], []];
+
+	document.addEventListener('click', changeState);
+	field.addEventListener('click', doAction);
+
+	finishButton.style.display = 'none';
 };
 
 document.addEventListener('click', changeState);
 field.addEventListener('click', doAction);
+finishButton.addEventListener('click', reloadRound);
