@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Крестики Нолики</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="statement">
+			<div class="cross active-statement">
+				<div class="cross-symbol">
+					<span></span>
+					<span></span>
+				</div>
+				<div class="score">0</div>
+			</div>
+			<div class="circle">
+				<div class="circle-symbol">
+					<span></span>
+				</div>
+				<div class="score">0</div>
+			</div>
+		</div>
+		<div id="field">
+			<div class="verticalLine" style="display: none"></div>
+			<div class="row">
+				<div class="place" data-point="1"></div>
+				<div class="place" data-point="2"></div>
+				<div class="place" data-point="3"></div>
+			</div>
+			<div class="row">
+				<div class="place" data-point="4"></div>
+				<div class="place" data-point="5"></div>
+				<div class="place" data-point="6"></div>
+			</div>
+			<div class="row">
+				<div class="place" data-point="7"></div>
+				<div class="place" data-point="8"></div>
+				<div class="place" data-point="9"></div>
+			</div>
+		</div>
+		<div class="nextRound">
+			<button class="nextRoundButton">СЛЕДУЮЩИЙ РАУНД</button>
+		</div>
+	</div>
+
+	<script type="module" src="./js/logic.js"></script>
+</body>
+</html>
